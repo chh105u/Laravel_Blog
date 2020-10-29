@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Web\CRUDController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('crud.index');
 });
+
+Route::resource('crud', CRUDController::class);
