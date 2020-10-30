@@ -16,8 +16,8 @@ use App\Http\Controllers\Web\CRUDController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/', function () {
-    return redirect()->route('crud.index');
-});
+// Route::get('/', function () {
+//     return redirect()->route('crud.index');
+// });
 
 Route::resource('crud', CRUDController::class);
