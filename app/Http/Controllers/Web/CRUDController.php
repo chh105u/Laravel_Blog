@@ -22,6 +22,7 @@ class CRUDController extends Controller
     public function index()
     {
         $posts=$this->CRUDRepo->index();
+        // $posts=\App\Models\CRUD::paginate(10);
         return view('crud.index',['posts'=>$posts]);
     }
 
